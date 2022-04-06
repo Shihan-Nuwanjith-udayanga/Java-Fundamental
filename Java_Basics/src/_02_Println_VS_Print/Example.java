@@ -1,4 +1,4 @@
-package Println_VS_Print;
+package _02_Println_VS_Print;
 
 // ========= System.out.println(data) vs System.out.print(data) ============
 

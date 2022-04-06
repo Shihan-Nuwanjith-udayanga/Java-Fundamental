@@ -1,4 +1,4 @@
-package Main_Methods;
+package _01_Main_Methods;
 
 // ============= Basic Layout of Java ( Java Source code ) ==============
 /*
