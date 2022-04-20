@@ -1,4 +1,4 @@
-package Rules_for_Method_Declarations;
+package _05_Rules_for_Method_Declarations;
 
 // ========================== Rules for Method Declarations ===================================
 
