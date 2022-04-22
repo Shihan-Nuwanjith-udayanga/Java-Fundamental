@@ -276,3 +276,201 @@ class Example{
 
 // ===========================================================================================================
 
+
+// ===========================================================================================================
+
+// Case I
+//========
+/*
+class Example{
+    public static void main(String args[]){
+        int x;
+        x=100;
+        System.out.println(x);
+        //--------------------
+        int[] xr; //Create an array reference/ address variable
+        xr=new int[5]; //Create an array Object( array Unit)
+        System.out.println(xr); //Print the array address
+        xr[0]=100;
+        System.out.println(xr[0]);
+    }
+}
+*/
+
+// Case II (3 steps to create an array)
+//======================================
+/*
+class Example{
+    public static void main(String args[]){
+        int[] xr; //Array Declaration
+        xr=new int[5]; //Array Construction
+        xr[0]=100; //Array Initialization
+        xr[1]=100; //Array Initialization
+    }
+}
+*/
+
+// Case III
+//===========
+/*
+class Example{
+    public static void main(String args[]){
+        int[] a;
+        int []b;
+        int c[];
+
+        int d[4]; //Illegal
+    }
+}
+*/
+
+// Case IV (Default Values)
+//==========================
+/*
+class Example{
+    public static void main(String args[]){
+        int x;
+        //System.out.println(x); //Illegal
+
+        int[] a=new int[3];
+        System.out.println(a[0]+" "+a[1]+" "+a[2]); //0 0 0
+    }
+}
+*/
+
+//============================================================================================================
+
+/*
+class Example{
+    public static void main(String args[]){
+        int[] a=new int[3];
+        System.out.println(a[0]+" "+a[1]+" "+a[2]); //0 0 0
+        short[] b=new short[3];
+        System.out.println(b[0]+" "+b[1]+" "+b[2]); //0 0 0
+        long[] c=new long[3];
+        System.out.println(c[0]+" "+c[1]+" "+c[2]); //0 0 0
+        float[] d=new float[3];
+        System.out.println(d[0]+" "+d[1]+" "+d[2]); //0.0 0.0 0.0
+
+        boolean[] f=new boolean[3];
+        System.out.println(f[0]+" "+f[1]+" "+f[2]); //false false false
+    }
+}
+*/
+
+
+/*
+class Example{
+    public static void main(String args[]){
+        char ch[] =new char[3];
+        System.out.println(ch[0]+" "+ch[1]+" "+ch[2]);
+
+        int code=ch[0];
+        System.out.println("Ch[0] : "+code);
+    }
+}
+*/
+
+//============================================================================================================
+
+// Case V
+//========
+/*
+class Example{
+    public static void main(String args[]){
+        int[] a=new int[5];
+        //int[] b=new int[]; //Illegal
+
+        int[] c={10,20,30,40,50};
+        int[] d;
+        //d={10,20,30,40,50}; //Illegal
+
+        int[] e=new int[]{10,20,30,40,50};
+        int[] f;
+        f=new int[]{10,20,30,40,50}; //Legal
+
+        int[] g=new int[5]{10,20,30,40,50}; //IllegaL
+    }
+}
+*/
+
+// Case VI  Length of an array (Size)
+//===================================
+/*
+class Example{
+    public static void main(String args[]){
+        int[] a=new int[12];
+        System.out.println("Length/Size : "+a.length);
+    }
+}
+*/
+
+// Case VII (Array Index out of bounds error)
+// ==========================================
+/*
+class Example{
+    public static void main(String args[]){
+        int[] a=new int[3];
+        a[0]=100;
+        a[1]=200;
+        a[2]=300;
+        a[3]=400;  //
+
+        a[10000000]=23; //Legal
+        a[-12]=233;
+    }
+}
+*/
+
+// Case VIII
+// =========
+/*
+class Example{
+    public static void main(String args[]){
+        int[] a=new int[3];
+        int[] b={10,20,30};
+        System.out.println(a[0]+" "+a[1]+" "+a[2]);//0 0 0
+        System.out.println(b[0]+" "+b[1]+" "+b[2]);//10 20 30
+        System.out.println(a==b); //false
+
+        a=b; //?
+        System.out.println(a[0]+" "+a[1]+" "+a[2]);//
+        System.out.println(b[0]+" "+b[1]+" "+b[2]);//
+        System.out.println(a==b); //true
+    }
+}
+*/
+
+// Case IX
+// =======
+/*
+class Example{
+    public static void main(String args[]){
+        int[] xr=new int[2];
+        int x=100;
+        xr=100;
+        x=new int[2];
+        xr=x;
+        x=(int)xr;
+    }
+}
+*/
+
+// Case X
+// =======
+/*
+class Example{
+    public static void main(String args[]){
+        int[] xr=new int[2];
+        double[] dr=new double[2];
+        dr[0]=xr[0]; //?
+        xr[0]=dr[0]; //?
+        xr[0]=(int)dr[0]; //?
+
+        dr=xr;
+        xr=dr;
+        dr=(double[])xr;
+        xr=(int[])dr;
+    }
+}
+*/
