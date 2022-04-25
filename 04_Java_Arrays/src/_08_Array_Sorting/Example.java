@@ -179,3 +179,108 @@ public class Example {
 
 // ==========================================================================================================
 
+// ======================================= Selection Sort ===================================================
+
+//Step I
+//======
+/*
+import java.util.*;
+public class Example {
+    public static void selectionSort(int[] x){
+        //
+    }
+    public static void main(String[] args) {
+        int[] xr={99,18,79,69,59,49,39,29,78,9,0};
+        System.out.println(Arrays.toString(xr)); //
+        selectionSort(xr);
+        System.out.println(Arrays.toString(xr)); //
+    }
+}
+*/
+
+//Step II
+//=======
+/*
+import java.util.*;
+public class Example {
+    public static void selectionSort(int[] x){
+        int max=x[0];
+        int index=0;
+        for(int j=1; j<x.length; j++){
+            if(x[j]>max){
+                max=x[j];
+                index=j;
+            }
+        }
+        x[index]=x[x.length-1];
+        x[x.length-1]=max;
+    }
+    public static void main(String[] args) {
+        int[] xr={99,18,79,69,59,49,39,29,78,9,0};
+        System.out.println(Arrays.toString(xr)); //
+        selectionSort(xr);
+        System.out.println(Arrays.toString(xr)); //
+    }
+}
+*/
+
+//Step III
+//========
+/*
+import java.util.*;
+public class Example {
+    public static void selectionSort(int[] x){
+        int max=x[0];
+        int index=0;
+        for(int j=1; j<x.length-0; j++){
+            if(x[j]>max){
+                max=x[j];
+                index=j;
+            }
+        }
+        x[index]=x[x.length-1];
+        x[x.length-1]=max;
+
+        //-----------------------------------------
+        max=x[0];
+        index=0;
+        for(int j=1; j<x.length-1; j++){
+            if(x[j]>max){
+                max=x[j];
+                index=j;
+            }
+        }
+        x[index]=x[x.length-2];
+        x[x.length-2]=max;
+        //-----------------------------------------
+
+        max=x[0];
+        index=0;
+        for(int j=1; j<x.length-2; j++){
+            if(x[j]>max){
+                max=x[j];
+                index=j;
+            }
+        }
+        x[index]=x[x.length-3];
+        x[x.length-3]=max;
+    }
+    public static void main(String[] args) {
+        int[] xr={99,18,79,69,59,49,39,29,78,9,0};
+        System.out.println(Arrays.toString(xr)); //
+        selectionSort(xr);
+        System.out.println(Arrays.toString(xr)); //
+    }
+}
+*/
+
+//Step IV
+//=======
+
+
+
+
+
+
+
+
