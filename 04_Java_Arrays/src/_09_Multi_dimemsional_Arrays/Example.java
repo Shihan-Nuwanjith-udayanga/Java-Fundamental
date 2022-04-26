@@ -204,3 +204,163 @@ public class Example {
     }
 }
 */
+
+// ============================================================================================================
+
+// ============================================================================================================
+
+// Case I
+// ------
+/*
+import java.util.*;
+public class Example {
+    public static void main(String[] args) {
+        int[] ar;
+        ar=new int[4];
+        System.out.println(ar);
+        System.out.println(ar[0]);
+
+        int[][] br;
+        br=new int[4][3];
+        System.out.println(br);
+        System.out.println(br[0]);
+        System.out.println(br[0][0]);
+    }
+}
+*/
+
+// Case II (3D Arrays)
+// ------------------
+import java.util.*;
+/*
+public class Example {
+    public static void main(String[] args) {
+        int[][][] cr;
+        cr=new int[4][3][2];
+        System.out.println(cr);
+        System.out.println(cr[0]);
+        System.out.println(cr[0][0]);
+        System.out.println(cr[0][0][0]);
+    }
+}
+*/
+
+
+// Case III
+// --------
+/*
+import java.util.*;
+public class Example {
+    public static void main(String[] args) {
+        int[][][] x,y,z; //x,y,z --> 3D type reference Variables
+        int p, q[], r[][], s[][][]; //p->int, q->1D, r-->2D, s-->3D
+
+        int[][] a,b[],c,d[][];
+        //a-->2D
+        //b-->3D
+        //c-->2D
+        //d-->4D
+    }
+}
+*/
+
+
+// Case IV
+// -------
+/*
+import java.util.*;
+public class Example {
+    public static void main(String[] args) {
+        //----------Method 1----------------------
+        int[][] a=new int[4][3];
+
+        //----------Method 2----------------------
+        int[][] b=new int[4][]; //Legal
+        System.out.println(b[0]+" "+b[1]+" "+b[2]+" "+b[3]);
+        b[0]=new int[4];
+        b[1]=new int[3];
+        b[2]=new int[5];
+        b[3]=new int[7];
+        System.out.println(b[0]+" "+b[1]+" "+b[2]+" "+b[3]);
+
+        //----------Method 3----------------------
+        int[] p={}; //Legal
+        System.out.println("length of p : "+p.length); //0
+        int[][] c={}; //Legal
+        System.out.println("length of c : "+c.length); //0
+        //int[][] d={12,23,34,54}; //Illegal
+        int[][] e={{12,23,34,54}};
+        System.out.println("length of e : "+e.length); //1
+        int[][] f={{12,23,34},{54,23,85,34},{23,65,76,35,75}};
+        System.out.println("length of f : "+f.length); //3
+
+    }
+}
+*/
+
+
+// Case V
+// ------
+/*
+import java.util.*;
+public class Example {
+    public static void main(String[] args) {
+        int[][] f={{12,23,34},{54,23,85,34},{23,65,76,35,75}};
+        //print data in a tabular
+        for(int i=0; i<f.length; i++){
+            for(int j=0; j<f[i].length; j++){
+                System.out.print(f[i][j]+"\t");
+            }
+            System.out.println();
+        }
+    }
+}
+*/
+
+// Case VI (Passing twoD array into a method)
+// ------------------------------------------
+/*
+public class Example {
+    public static void printData(int [][]x){
+        for(int i=0; i<x.length; i++){
+            for(int j=0; j<x[i].length; j++){
+                System.out.print(x[i][j]+"\t");
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String[] args) {
+        int[][] f={{12,23,34},{54,23,85,34},{23,65,76,35,75}};
+        printData(f);
+    }
+}
+*/
+
+
+// Case VII (for-each)
+// -------------------
+/*
+public class Example {
+    public static void main(String[] args) {
+        int[][] f={{12,23,34},{54,23,85,34},{23,65,76,35,75}};
+        //prints elements using "for-each"
+
+    }
+}
+*/
+
+// --------------------------------------------------------------------
+/*
+public class Example {
+    public static void main(String[] args) {
+        int[][] f={{12,23,34},{54,23,85,34},{23,65,76,35,75}};
+        //using "for-each"
+        for(int []ar : f ){
+            for(int a : ar){
+                System.out.print(a+"\t");
+            }
+            System.out.println();
+        }
+    }
+}
+*/
